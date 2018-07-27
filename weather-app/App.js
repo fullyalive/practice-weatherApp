@@ -4,8 +4,20 @@ import Weather from "./Weather";
 
 export default class App extends React.Component {
   state = {
-    isLoaded: true
+    isLoaded: false
   };
+  componentDidMount() {
+    navigator.geolocation.getCurrentPosition(
+      position => {
+        this.setState({
+          isLoaded: true
+        });
+      },
+      error => {
+        cosole.log(error);
+      }
+    );
+  }
   render() {
     const { isLoaded } = this.state;
     return (
