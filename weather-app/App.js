@@ -1,15 +1,16 @@
 import React from "react";
 import { StyleSheet, Text, View, Image, ActivityIndicator } from "react-native";
+import Weather from "./Weather";
 
 export default class App extends React.Component {
   state = {
-    isLoaded: false
+    isLoaded: true
   };
   render() {
     const { isLoaded } = this.state;
     return (
       <View style={styles.container}>
-        {isLoaded ? null : (
+        {isLoaded ? <Weather /> : (
           <View style={styles.loading}>
             <Text style={styles.loadingText}>
               날씨 정보를 불러오고 있어요 \' _ '/
