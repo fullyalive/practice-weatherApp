@@ -30,22 +30,22 @@ export default class App extends React.Component {
     )
       .then(response => response.json())
       .then(json => {
-        console.log(json);
         this.setState({
           temperature: json.main.temp,
           name: json.weather[0].main,
           isLoaded: true
         });
+        console.log(json);
       });
   };
 
   render() {
-    const { isLoaded, error } = this.state;
+    const { isLoaded, error, temperature, name } = this.state;
     return (
       <View style={styles.container}>
         <StatusBar hidden={true} />
         {isLoaded ? (
-          <Weather />
+          <Weather weatherName={name} temp={Math.floor(temperature - 273.15)} />
         ) : (
           <View style={styles.loading}>
             <Text style={styles.loadingText}>
