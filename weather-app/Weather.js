@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { StyleSheet, Text, View } from "react-native";
 import { LinearGradient } from "expo";
-import { Ionicons } from "@expo/vector-icons";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 import PropTypes from "prop-types";
 
 const weatherCases = {
@@ -9,49 +9,49 @@ const weatherCases = {
     colors: ["#00C6FB", "#005BEA"],
     title: "비",
     subtitle: "우산을 챙기세요",
-    icon: "ios-rainy"
+    icon: "weather-pouring"
   },
   Clear: {
     colors: ["#00C6FB", "#005BEA"],
     title: "화창",
     subtitle: "선크림을 바르세요",
-    icon: "ios-sunny"
+    icon: "weather-sunny"
   },
   Tunderstorm: {
     colors: ["#00C6FB", "#005BEA"],
     title: "천둥번개",
     subtitle: "낙뢰 조심, 비조심!",
-    icon: "ios-thunderstorm"
+    icon: "weather-lightning"
   },
   Clouds: {
     colors: ["#00C6FB", "#005BEA"],
     title: "구름 많아요",
     subtitle: "우울 조심!",
-    icon: "ios-cloudy"
+    icon: "weather-cloudy"
   },
   Snow: {
     colors: ["#00C6FB", "#005BEA"],
     title: "눈",
     subtitle: "눈길 조심!",
-    icon: "ios-sonw"
+    icon: "weather-sonwy"
   },
   Drizzle: {
     colors: ["#00C6FB", "#005BEA"],
     title: "이슬비",
     subtitle: "옷이 젖지 않도록!",
-    icon: "ios-rainy-outline"
+    icon: "weather-hail"
   },
   Haze: {
     colors: ["#00C6FB", "#005BEA"],
     title: "안개",
     subtitle: "시야를 확보하세요",
-    icon: "ios-rainy-outline"
+    icon: "weather-fog"
   },
   Mist: {
     colors: ["#00C6FB", "#005BEA"],
     title: "안개",
     subtitle: "시야를 확보하세요",
-    icon: "ios-rainy-outline"
+    icon: "weather-fog"
   }
 };
 
@@ -65,7 +65,7 @@ function Weather({ weatherName, temp }) {
       style={styles.container}
     >
       <View style={styles.upper}>
-        <Ionicons
+        <MaterialCommunityIcons
           color="white"
           size={144}
           name={weatherCases[weatherName].icon}
