@@ -26,7 +26,7 @@ export default class App extends React.Component {
 
   _getWeather = (lat, long) => {
     fetch(
-      `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&APPID=${API_KEY}`
+      `http://api.openweathermap.org/data/2.5/weather?q=Seoul&APPID=${API_KEY}`
     )
       .then(response => response.json())
       .then(json => {

@@ -12,43 +12,43 @@ const weatherCases = {
     icon: "weather-pouring"
   },
   Clear: {
-    colors: ["#00C6FB", "#005BEA"],
+    colors: ["#FEF253", "#FF7300"],
     title: "화창",
     subtitle: "선크림을 바르세요",
     icon: "weather-sunny"
   },
   Tunderstorm: {
-    colors: ["#00C6FB", "#005BEA"],
+    colors: ["#00ECBC", "#007ADF"],
     title: "천둥번개",
     subtitle: "낙뢰 조심, 비조심!",
     icon: "weather-lightning"
   },
   Clouds: {
-    colors: ["#00C6FB", "#005BEA"],
+    colors: ["#D7D2CC", "#304352"],
     title: "구름 많아요",
     subtitle: "우울 조심!",
     icon: "weather-cloudy"
   },
   Snow: {
-    colors: ["#00C6FB", "#005BEA"],
+    colors: ["#7DE2FC", "#B9B6E5"],
     title: "눈",
     subtitle: "눈길 조심!",
     icon: "weather-sonwy"
   },
   Drizzle: {
-    colors: ["#00C6FB", "#005BEA"],
+    colors: ["#89F7FE", "#66A6FF"],
     title: "이슬비",
     subtitle: "옷이 젖지 않도록!",
     icon: "weather-hail"
   },
   Haze: {
-    colors: ["#00C6FB", "#005BEA"],
+    colors: ["#89F7FE", "#66A6FF"],
     title: "안개",
     subtitle: "시야를 확보하세요",
     icon: "weather-fog"
   },
   Mist: {
-    colors: ["#00C6FB", "#005BEA"],
+    colors: ["#D7D2CC", "#304352"],
     title: "안개",
     subtitle: "시야를 확보하세요",
     icon: "weather-fog"
@@ -67,7 +67,7 @@ function Weather({ weatherName, temp }) {
       <View style={styles.upper}>
         <MaterialCommunityIcons
           color="white"
-          size={144}
+          size={120}
           name={weatherCases[weatherName].icon}
         />
         <Text style={styles.temp}>{temp} &deg;</Text>
@@ -95,19 +95,18 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "transparent"
+    backgroundColor: "transparent",
+    marginTop: 80
   },
   temp: {
     fontSize: 48,
     backgroundColor: "transparent",
     color: "white",
-    marginTop: 10
   },
   lower: {
     flex: 1,
-    alignItems: "flex-start",
-    justifyContent: "flex-end",
-    paddingLeft: 25,
+    alignItems: "center",
+    justifyContent: "center",
     marginBottom: 80
   },
   title: {
@@ -115,7 +114,7 @@ const styles = StyleSheet.create({
     backgroundColor: "transparent",
     color: "white",
     marginBottom: 10,
-    fontWeight: "300"
+    fontWeight: "400"
   },
   subtitle: {
     fontSize: 24,
